@@ -108,6 +108,23 @@
           "description": "Copy development commands documentation"
         }
       ]
+    },
+    "prompt-engineer": {
+      "enabled": false,
+      "description": "Transform requirements into AI-executable task prompts with unambiguous technical roadmaps",
+      "operations": [
+        {
+          "type": "merge_dir",
+          "source": "prompt-engineer-workflow",
+          "description": "Merge prompt-engineer commands and agents"
+        },
+        {
+          "type": "copy_file",
+          "source": "docs/PROMPT-ENGINEER-WORKFLOW.md",
+          "target": "docs/PROMPT-ENGINEER-WORKFLOW.md",
+          "description": "Copy prompt-engineer workflow documentation"
+        }
+      ]
     }
   }
 }

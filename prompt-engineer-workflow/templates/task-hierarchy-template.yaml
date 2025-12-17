@@ -1,0 +1,146 @@
+feature: example-feature
+version: 1.0
+generated_at: 2025-01-18T00:00:00Z
+total_tasks: 5
+estimated_hours: 19
+
+# Hierarchical task tree
+hierarchy:
+  - id: EPIC-001
+    name: Example Epic
+    type: epic
+    module: backend/example
+    description: High-level epic description
+    children:
+      - id: FEAT-001
+        name: Core Feature
+        type: feature
+        module: backend/example/services
+        estimated_hours: 15
+        children:
+          - id: FEAT-001-SUB-01
+            name: Foundation Component
+            type: sub-task
+            estimated_hours: 4
+            complexity: 5
+            description: Implement core foundational logic
+
+          - id: FEAT-001-SUB-02
+            name: Validation Logic
+            type: sub-task
+            estimated_hours: 6
+            complexity: 6
+            description: Implement validation and error handling
+
+          - id: FEAT-001-SUB-03
+            name: Integration Component
+            type: sub-task
+            estimated_hours: 5
+            complexity: 5
+            description: Integrate with existing system
+
+      - id: FEAT-002
+        name: Supporting Feature
+        type: feature
+        module: backend/example/middleware
+        estimated_hours: 4
+        children:
+          - id: FEAT-002-SUB-01
+            name: Middleware Implementation
+            type: sub-task
+            estimated_hours: 4
+            complexity: 4
+            description: Create middleware layer
+
+# Dependency graph (execution constraints)
+dependencies:
+  FEAT-001-SUB-02:
+    depends_on:
+      - FEAT-001-SUB-01
+    blocks:
+      - FEAT-001-SUB-03
+      - FEAT-002-SUB-01
+    reason: "Validation requires foundation, blocks integration"
+
+  FEAT-001-SUB-03:
+    depends_on:
+      - FEAT-001-SUB-02
+    blocks: []
+    reason: "Integration needs validation complete"
+
+  FEAT-002-SUB-01:
+    depends_on:
+      - FEAT-001-SUB-02
+    blocks: []
+    reason: "Middleware consumes validation logic"
+
+# Parallel execution groups
+parallel_groups:
+  - name: Foundation Layer
+    tasks:
+      - FEAT-001-SUB-01
+    reason: "No dependencies, can start immediately"
+
+  - name: Integration Layer
+    tasks:
+      - FEAT-001-SUB-03
+      - FEAT-002-SUB-01
+    reason: "Both depend on SUB-02, can parallelize after"
+
+# Module ownership
+modules:
+  backend/example/services:
+    - FEAT-001-SUB-01
+    - FEAT-001-SUB-02
+    - FEAT-001-SUB-03
+
+  backend/example/middleware:
+    - FEAT-002-SUB-01
+
+# Execution phases
+execution_phases:
+  - phase: 1
+    name: Foundation
+    objective: Establish core capabilities
+    tasks:
+      - FEAT-001-SUB-01
+    parallel_execution: false
+    estimated_duration: 4h
+
+  - phase: 2
+    name: Core Logic
+    objective: Implement primary functionality
+    tasks:
+      - FEAT-001-SUB-02
+    parallel_execution: false
+    estimated_duration: 6h
+
+  - phase: 3
+    name: Integration
+    objective: Connect to existing system
+    tasks:
+      - FEAT-001-SUB-03
+      - FEAT-002-SUB-01
+    parallel_execution: true
+    estimated_duration: 5h  # Max of parallel tasks
+
+# Critical path analysis
+critical_path:
+  - FEAT-001-SUB-01
+  - FEAT-001-SUB-02
+  - FEAT-001-SUB-03
+  total_duration: 15h
+  blocking_tasks:
+    - FEAT-001-SUB-02
+
+# Risk assessment
+risks:
+  - task_id: FEAT-001-SUB-03
+    risk: External system integration failure
+    impact: high
+    mitigation: Mark human decision point, implement fallback
+
+  - task_id: FEAT-002-SUB-01
+    risk: Performance degradation
+    impact: medium
+    mitigation: Load testing, caching strategy

@@ -103,8 +103,8 @@ deploy-agents:
 	@cp $(BMAD_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
 	@cp $(REQUIREMENTS_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
 	@cp $(ESSENTIALS_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
-	@cp $(ADVANCED_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
 	@echo "✅ All agents deployed!"
+#cp $(ADVANCED_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
 
 # Deploy everything
 deploy-all: deploy-commands deploy-agents

@@ -109,37 +109,54 @@
         }
       ]
     },
-    "project-task-prompts": {
+    "proj-gen-task-prompts": {
       "enabled": false,
       "description": "Transform requirements into AI-executable task prompts with unambiguous technical roadmaps",
       "operations": [
         {
           "type": "merge_dir",
-          "source": "project-task-prompts-workflow",
-          "description": "Merge project-task-prompts commands and agents"
+          "source": "proj-gen-task-prompts-workflow",
+          "description": "Merge proj-gen-task-prompts commands and agents"
         },
         {
           "type": "copy_file",
-          "source": "docs/PROJECT-TASK-PROMPTS-WORKFLOW.md",
-          "target": "docs/PROJECT-TASK-PROMPTS-WORKFLOW.md",
-          "description": "Copy project-task-prompts workflow documentation"
+          "source": "docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md",
+          "target": "docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md",
+          "description": "Copy proj-gen-task-prompts workflow documentation"
         }
       ]
     },
-    "project-standards": {
+    "proj-gen-standards": {
       "enabled": false,
       "description": "Extract and standardize code style from existing codebase with best practices review and improvement recommendations",
       "operations": [
         {
           "type": "merge_dir",
-          "source": "project-standards-workflow",
-          "description": "Merge project-standards commands and agents"
+          "source": "proj-gen-standards-workflow",
+          "description": "Merge proj-gen-standards commands and agents"
         },
         {
           "type": "copy_file",
-          "source": "docs/PROJECT-STANDARDS-WORKFLOW.md",
-          "target": "docs/PROJECT-STANDARDS-WORKFLOW.md",
-          "description": "Copy project-standards workflow documentation"
+          "source": "docs/PROJ-GEN-STANDARDS-WORKFLOW.md",
+          "target": "docs/PROJ-GEN-STANDARDS-WORKFLOW.md",
+          "description": "Copy proj-gen-standards workflow documentation"
+        }
+      ]
+    },
+    "proj-check-standards": {
+      "enabled": false,
+      "description": "Check codebase against project standards and best practices, generate actionable improvement tasks",
+      "operations": [
+        {
+          "type": "merge_dir",
+          "source": "proj-check-standards-workflow",
+          "description": "Merge proj-check-standards commands and agents"
+        },
+        {
+          "type": "copy_file",
+          "source": "docs/PROJ-CHECK-STANDARDS-WORKFLOW.md",
+          "target": "docs/PROJ-CHECK-STANDARDS-WORKFLOW.md",
+          "description": "Copy proj-check-standards workflow documentation"
         }
       ]
     }

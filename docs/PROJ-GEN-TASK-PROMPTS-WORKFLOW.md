@@ -11,7 +11,7 @@ The Project Task Prompts Workflow transforms requirements into AI-executable tas
 | `/dev` | Immediate implementation | Working code | Quick feature development |
 | `/bmad-pilot` | Project management | Sprint plans | Large team coordination |
 | `/requirements-pilot` | Spec-to-code | Technical specs → Code | Prototyping |
-| **`/project-task-prompts`** | **Prompt generation** | **AI-executable prompts** | **Distributed execution, templates** |
+| **`/proj-gen-task-prompts`** | **Prompt generation** | **AI-executable prompts** | **Distributed execution, templates** |
 
 ## When to Use
 
@@ -30,7 +30,7 @@ The Project Task Prompts Workflow transforms requirements into AI-executable tas
 
 ```bash
 # Basic usage
-/project-task-prompts "Implement JWT authentication with refresh tokens"
+/proj-gen-task-prompts "Implement JWT authentication with refresh tokens"
 
 # Output location
 .claude/specs/jwt-authentication/tasks/
@@ -175,7 +175,7 @@ Handle errors properly.
 
 ```bash
 # Generate prompts
-/project-task-prompts "Build payment processing system"
+/proj-gen-task-prompts "Build payment processing system"
 
 # Distribute to agents
 # Agent A gets:
@@ -189,7 +189,7 @@ cat .claude/specs/payment-processing/tasks/FEAT-002-SUB-01.md
 
 ```bash
 # Generate detailed prompt first
-/project-task-prompts "User authentication"
+/proj-gen-task-prompts "User authentication"
 
 # Use prompt as input for /dev
 /dev @.claude/specs/user-authentication/tasks/FEAT-001-SUB-01.md
@@ -335,9 +335,9 @@ Marked when AI cannot proceed without human input:
 
 ## See Also
 
-- [Project Task Prompts Module README](../project-task-prompts-workflow/README.md)
-- [Agent Specifications](../project-task-prompts-workflow/agents/)
-- [Templates](../project-task-prompts-workflow/templates/)
+- [Project Task Prompts Module README](../proj-gen-task-prompts-workflow/README.md)
+- [Agent Specifications](../proj-gen-task-prompts-workflow/agents/)
+- [Templates](../proj-gen-task-prompts-workflow/templates/)
 - [Codeagent-Wrapper Guide](./CODEAGENT-WRAPPER.md)
 
 ---

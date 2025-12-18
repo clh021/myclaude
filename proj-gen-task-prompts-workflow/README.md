@@ -114,7 +114,7 @@ Each generated task prompt contains 10 required modules:
 
 ```bash
 # Start workflow
-/project-task-prompts "Implement JWT authentication with refresh tokens"
+/proj-gen-task-prompts "Implement JWT authentication with refresh tokens"
 
 # Output is generated in:
 # .claude/specs/jwt-authentication/tasks/
@@ -157,7 +157,7 @@ Optimize database queries.
 ### With `/dev` Workflow
 ```bash
 # Generate prompts first
-/project-task-prompts "user authentication"
+/proj-gen-task-prompts "user authentication"
 
 # Then execute with /dev
 /dev @.claude/specs/user-authentication/tasks/FEAT-001-SUB-01.md
@@ -183,11 +183,11 @@ EOF
 ## Installation
 
 ```bash
-# Install project-task-prompts module
-python3 install.py --module project-task-prompts
+# Install proj-gen-task-prompts module
+python3 install.py --module proj-gen-task-prompts
 
 # Verify installation
-ls ~/.claude/commands/project-task-prompts.md
+ls ~/.claude/commands/proj-gen-task-prompts.md
 ls ~/.claude/agents/prompt-*.md
 ```
 
@@ -235,12 +235,12 @@ EOF
 To improve the workflow:
 1. Update agent definitions in `agents/`
 2. Enhance templates in `templates/`
-3. Add examples in `docs/PROMPT-ENGINEER-WORKFLOW.md`
+3. Add examples in `docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md`
 4. Test with real features before committing
 
 ## See Also
 
-- [Full Workflow Documentation](../../docs/PROMPT-ENGINEER-WORKFLOW.md)
+- [Full Workflow Documentation](../../docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md)
 - [Agent Specifications](./agents/)
 - [Templates](./templates/)
 - [codeagent-wrapper Guide](../../docs/CODEAGENT-WRAPPER.md)

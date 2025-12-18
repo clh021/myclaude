@@ -9,8 +9,8 @@ The Project Standards Workflow extracts coding patterns from your existing codeb
 | Workflow | Purpose | Output | Best For |
 |----------|---------|--------|-------------|
 | `/dev` | Immediate implementation | Working code | Quick feature development |
-| `/prompt-engineer` | Prompt generation | AI-executable prompts | Distributed execution |
-| **`/project-standards`** | **Standards extraction** | **CODESTYLE.md + migration plan** | **Team consistency, onboarding** |
+| `/proj-gen-task-prompts` | Prompt generation | AI-executable prompts | Distributed execution |
+| **`/proj-gen-standards`** | **Standards extraction** | **CODESTYLE.md + migration plan** | **Team consistency, onboarding** |
 
 ## When to Use
 
@@ -30,16 +30,16 @@ The Project Standards Workflow extracts coding patterns from your existing codeb
 
 ```bash
 # Basic usage - analyze current directory
-/project-standards
+/proj-gen-standards
 
 # Specify project name
-/project-standards --project-name="Authentication Service"
+/proj-gen-standards --project-name="Authentication Service"
 
 # Skip best practices review (faster, extract and document only)
-/project-standards --skip-review
+/proj-gen-standards --skip-review
 
 # Quick mode (skip detailed examples)
-/project-standards --quick
+/proj-gen-standards --quick
 
 # Output location
 .claude/standards/{project_name}/
@@ -343,7 +343,7 @@ Quick Start:
 ### Example 1: JavaScript/TypeScript Project
 
 ```bash
-/project-standards
+/proj-gen-standards
 ```
 
 **Scan Results**:
@@ -376,7 +376,7 @@ Quick Start:
 ### Example 2: Python Project
 
 ```bash
-/project-standards --project-name="Analytics API"
+/proj-gen-standards --project-name="Analytics API"
 ```
 
 **Scan Results**:
@@ -583,7 +583,7 @@ Each standard includes:
 - Use CODESTYLE.md as reference during /dev implementation
 - Follow CODE_REVIEW_CHECKLIST.md before marking tasks complete
 
-### With `/prompt-engineer` Workflow
+### With `/proj-gen-task-prompts` Workflow
 - Include CODESTYLE.md link in generated prompts
 - AI follows project standards during code generation
 
@@ -616,13 +616,13 @@ Each standard includes:
 
 ## See Also
 
-- [Project Standards Workflow Module README](../project-standards-workflow/README.md)
-- [Style Extractor Agent](../project-standards-workflow/agents/style-extractor.md)
-- [Standards Documenter Agent](../project-standards-workflow/agents/standards-documenter.md)
-- [Best Practices Reviewer Agent](../project-standards-workflow/agents/best-practices-reviewer.md)
-- [Standards Improver Agent](../project-standards-workflow/agents/standards-improver.md)
-- [CODESTYLE Template](../project-standards-workflow/templates/codestyle-template.md)
-- [Migration Roadmap Template](../project-standards-workflow/templates/migration-template.md)
+- [Project Standards Workflow Module README](../proj-gen-standards-workflow/README.md)
+- [Style Extractor Agent](../proj-gen-standards-workflow/agents/style-extractor.md)
+- [Standards Documenter Agent](../proj-gen-standards-workflow/agents/standards-documenter.md)
+- [Best Practices Reviewer Agent](../proj-gen-standards-workflow/agents/best-practices-reviewer.md)
+- [Standards Improver Agent](../proj-gen-standards-workflow/agents/standards-improver.md)
+- [CODESTYLE Template](../proj-gen-standards-workflow/templates/codestyle-template.md)
+- [Migration Roadmap Template](../proj-gen-standards-workflow/templates/migration-template.md)
 
 ---
 

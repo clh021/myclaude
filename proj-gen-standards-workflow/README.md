@@ -33,16 +33,16 @@ The Project Standards Workflow analyzes your codebase to extract coding patterns
 
 ```bash
 # Basic usage - analyze current directory
-/project-standards
+/proj-gen-standards
 
 # Specify project name
-/project-standards --project-name="My Project"
+/proj-gen-standards --project-name="My Project"
 
 # Skip best practices review (faster, only extract and document)
-/project-standards --skip-review
+/proj-gen-standards --skip-review
 
 # Quick mode (skip detailed examples, faster execution)
-/project-standards --quick
+/proj-gen-standards --quick
 ```
 
 ## Workflow Steps
@@ -173,7 +173,7 @@ The Project Standards Workflow analyzes your codebase to extract coding patterns
 ### Example 1: JavaScript/TypeScript Project
 
 ```bash
-/project-standards
+/proj-gen-standards
 ```
 
 **Analysis Results**:
@@ -200,7 +200,7 @@ The Project Standards Workflow analyzes your codebase to extract coding patterns
 ### Example 2: Python Project
 
 ```bash
-/project-standards --project-name="Python API"
+/proj-gen-standards --project-name="Python API"
 ```
 
 **Analysis Results**:
@@ -307,7 +307,7 @@ Generated standards can be used in:
 
 ## See Also
 
-- [Project Standards Workflow Guide](../../docs/PROJECT-STANDARDS-WORKFLOW.md)
+- [Project Standards Workflow Guide](../../docs/PROJ-GEN-STANDARDS-WORKFLOW.md)
 - [Style Extractor Agent](./agents/style-extractor.md)
 - [Standards Documenter Agent](./agents/standards-documenter.md)
 - [Best Practices Reviewer Agent](./agents/best-practices-reviewer.md)

@@ -109,8 +109,9 @@ Location: `dev-workflow/commands/dev.md`
 **Other Workflows:**
 - `/bmad-pilot`: Full agile (PO → Architect → Tech Lead → Dev → Review → QA)
 - `/requirements-pilot`: Requirements → Plan → Code → Review → Test
-- `/project-task-prompts`: Requirements → Unambiguous task prompts (for distributed AI execution)
-- `/project-standards`: Extract code patterns → Generate CODESTYLE.md → Review best practices → Migration roadmap
+- `/proj-gen-task-prompts`: Requirements → Unambiguous task prompts (for distributed AI execution)
+- `/proj-gen-standards`: Extract code patterns → Generate CODESTYLE.md → Review best practices → Migration roadmap
+- `/proj-check-standards`: Check compliance → Identify violations → Generate actionable improvement tasks
 - Direct commands: `/code`, `/debug`, `/test`, `/review`, `/optimize`, `/refactor`, `/docs`
 
 ## Development Commands

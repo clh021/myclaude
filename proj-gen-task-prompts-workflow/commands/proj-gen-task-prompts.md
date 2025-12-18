@@ -3,7 +3,7 @@ description: Transform requirements into AI-executable task prompts with unambig
 ---
 
 ## Usage
-`/project-task-prompts <FEATURE_DESCRIPTION>`
+`/proj-gen-task-prompts <FEATURE_DESCRIPTION>`
 
 ## Context
 - Feature to develop: $ARGUMENTS

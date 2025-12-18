@@ -3,7 +3,7 @@ description: Extract and standardize code style from existing codebase with best
 ---
 
 ## Usage
-`/project-standards [OPTIONS]`
+`/proj-gen-standards [OPTIONS]`
 
 ### Options
 - `--project-name`: Project name for documentation (default: auto-detected from package.json or git)

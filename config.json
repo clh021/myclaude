@@ -125,6 +125,23 @@
           "description": "Copy prompt-engineer workflow documentation"
         }
       ]
+    },
+    "project-standards": {
+      "enabled": false,
+      "description": "Extract and standardize code style from existing codebase with best practices review and improvement recommendations",
+      "operations": [
+        {
+          "type": "merge_dir",
+          "source": "project-standards-workflow",
+          "description": "Merge project-standards commands and agents"
+        },
+        {
+          "type": "copy_file",
+          "source": "docs/PROJECT-STANDARDS-WORKFLOW.md",
+          "target": "docs/PROJECT-STANDARDS-WORKFLOW.md",
+          "description": "Copy project-standards workflow documentation"
+        }
+      ]
     }
   }
 }

@@ -1,8 +1,8 @@
-# Prompt Engineer Workflow Guide
+# Project Task Prompts Workflow Guide
 
 ## Overview
 
-The Prompt Engineer Workflow transforms requirements into AI-executable task prompts with unambiguous technical roadmaps. This workflow is optimized for creating self-contained documentation that can be distributed to multiple AI agents, stored as reusable templates, or used as technical specifications.
+The Project Task Prompts Workflow transforms requirements into AI-executable task prompts with unambiguous technical roadmaps. This workflow is optimized for creating self-contained documentation that can be distributed to multiple AI agents, stored as reusable templates, or used as technical specifications.
 
 ## Key Differences from Other Workflows
 
@@ -11,7 +11,7 @@ The Prompt Engineer Workflow transforms requirements into AI-executable task pro
 | `/dev` | Immediate implementation | Working code | Quick feature development |
 | `/bmad-pilot` | Project management | Sprint plans | Large team coordination |
 | `/requirements-pilot` | Spec-to-code | Technical specs → Code | Prototyping |
-| **`/prompt-engineer`** | **Prompt generation** | **AI-executable prompts** | **Distributed execution, templates** |
+| **`/project-task-prompts`** | **Prompt generation** | **AI-executable prompts** | **Distributed execution, templates** |
 
 ## When to Use
 
@@ -30,7 +30,7 @@ The Prompt Engineer Workflow transforms requirements into AI-executable task pro
 
 ```bash
 # Basic usage
-/prompt-engineer "Implement JWT authentication with refresh tokens"
+/project-task-prompts "Implement JWT authentication with refresh tokens"
 
 # Output location
 .claude/specs/jwt-authentication/tasks/
@@ -175,7 +175,7 @@ Handle errors properly.
 
 ```bash
 # Generate prompts
-/prompt-engineer "Build payment processing system"
+/project-task-prompts "Build payment processing system"
 
 # Distribute to agents
 # Agent A gets:
@@ -189,7 +189,7 @@ cat .claude/specs/payment-processing/tasks/FEAT-002-SUB-01.md
 
 ```bash
 # Generate detailed prompt first
-/prompt-engineer "User authentication"
+/project-task-prompts "User authentication"
 
 # Use prompt as input for /dev
 /dev @.claude/specs/user-authentication/tasks/FEAT-001-SUB-01.md
@@ -335,9 +335,9 @@ Marked when AI cannot proceed without human input:
 
 ## See Also
 
-- [Prompt Engineer Module README](../prompt-engineer-workflow/README.md)
-- [Agent Specifications](../prompt-engineer-workflow/agents/)
-- [Templates](../prompt-engineer-workflow/templates/)
+- [Project Task Prompts Module README](../project-task-prompts-workflow/README.md)
+- [Agent Specifications](../project-task-prompts-workflow/agents/)
+- [Templates](../project-task-prompts-workflow/templates/)
 - [Codeagent-Wrapper Guide](./CODEAGENT-WRAPPER.md)
 
 ---

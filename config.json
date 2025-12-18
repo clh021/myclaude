@@ -109,20 +109,20 @@
         }
       ]
     },
-    "prompt-engineer": {
+    "project-task-prompts": {
       "enabled": false,
       "description": "Transform requirements into AI-executable task prompts with unambiguous technical roadmaps",
       "operations": [
         {
           "type": "merge_dir",
-          "source": "prompt-engineer-workflow",
-          "description": "Merge prompt-engineer commands and agents"
+          "source": "project-task-prompts-workflow",
+          "description": "Merge project-task-prompts commands and agents"
         },
         {
           "type": "copy_file",
-          "source": "docs/PROMPT-ENGINEER-WORKFLOW.md",
-          "target": "docs/PROMPT-ENGINEER-WORKFLOW.md",
-          "description": "Copy prompt-engineer workflow documentation"
+          "source": "docs/PROJECT-TASK-PROMPTS-WORKFLOW.md",
+          "target": "docs/PROJECT-TASK-PROMPTS-WORKFLOW.md",
+          "description": "Copy project-task-prompts workflow documentation"
         }
       ]
     },

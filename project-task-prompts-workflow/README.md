@@ -1,10 +1,10 @@
-# Prompt Engineer Workflow
+# Project Task Prompts Workflow
 
 Transform requirements into AI-executable task prompts with unambiguous technical roadmaps.
 
 ## Overview
 
-The Prompt Engineer Workflow is a specialized workflow module that generates self-contained, detailed task prompts optimized for AI execution. Unlike other workflows that focus on immediate implementation, this workflow creates comprehensive documentation that can be:
+The Project Task Prompts Workflow is a specialized workflow module that generates self-contained, detailed task prompts optimized for AI execution. Unlike other workflows that focus on immediate implementation, this workflow creates comprehensive documentation that can be:
 
 - Distributed to multiple AI agents for parallel execution
 - Stored as reusable implementation templates
@@ -114,7 +114,7 @@ Each generated task prompt contains 10 required modules:
 
 ```bash
 # Start workflow
-/prompt-engineer "Implement JWT authentication with refresh tokens"
+/project-task-prompts "Implement JWT authentication with refresh tokens"
 
 # Output is generated in:
 # .claude/specs/jwt-authentication/tasks/
@@ -157,7 +157,7 @@ Optimize database queries.
 ### With `/dev` Workflow
 ```bash
 # Generate prompts first
-/prompt-engineer "user authentication"
+/project-task-prompts "user authentication"
 
 # Then execute with /dev
 /dev @.claude/specs/user-authentication/tasks/FEAT-001-SUB-01.md
@@ -183,11 +183,11 @@ EOF
 ## Installation
 
 ```bash
-# Install prompt-engineer module
-python3 install.py --module prompt-engineer
+# Install project-task-prompts module
+python3 install.py --module project-task-prompts
 
 # Verify installation
-ls ~/.claude/commands/prompt-engineer.md
+ls ~/.claude/commands/project-task-prompts.md
 ls ~/.claude/agents/prompt-*.md
 ```
 

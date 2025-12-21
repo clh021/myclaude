@@ -110,7 +110,7 @@
       ]
     },
     "proj-gen-task-prompts": {
-      "enabled": false,
+      "enabled": true,
       "description": "Transform requirements into AI-executable task prompts with unambiguous technical roadmaps",
       "operations": [
         {
@@ -127,7 +127,7 @@
       ]
     },
     "proj-gen-standards": {
-      "enabled": false,
+      "enabled": true,
       "description": "Extract and standardize code style from existing codebase with best practices review and improvement recommendations",
       "operations": [
         {
@@ -144,7 +144,7 @@
       ]
     },
     "proj-check-standards": {
-      "enabled": false,
+      "enabled": true,
       "description": "Check codebase against project standards and best practices, generate actionable improvement tasks",
       "operations": [
         {

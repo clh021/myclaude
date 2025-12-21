@@ -106,8 +106,47 @@ deploy-agents:
 	@echo "✅ All agents deployed!"
 #cp $(ADVANCED_DIR)/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
 
+# Deploy Project Standards Checker workflow
+deploy-proj-check-standards:
+	@echo "🚀 Deploying Project Standards Checker workflow..."
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/commands
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/agents
+	@cp proj-check-standards-workflow/commands/*.md $(CLAUDE_CONFIG_DIR)/commands/
+	@cp proj-check-standards-workflow/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
+	@echo "✅ Project Standards Checker workflow deployed successfully!"
+	@echo "   Usage: /proj-check-standards"
+
+# Deploy Project Standards Generator workflow
+deploy-proj-gen-standards:
+	@echo "🚀 Deploying Project Standards Generator workflow..."
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/commands
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/agents
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/templates/proj-gen-standards
+	@cp proj-gen-standards-workflow/commands/*.md $(CLAUDE_CONFIG_DIR)/commands/
+	@cp proj-gen-standards-workflow/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
+	@cp -r proj-gen-standards-workflow/templates/* $(CLAUDE_CONFIG_DIR)/templates/proj-gen-standards/
+	@echo "✅ Project Standards Generator workflow deployed successfully!"
+	@echo "   Usage: /proj-gen-standards"
+
+# Deploy Project Task Prompts Generator workflow
+deploy-proj-gen-task-prompts:
+	@echo "🚀 Deploying Project Task Prompts Generator workflow..."
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/commands
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/agents
+	@mkdir -p $(CLAUDE_CONFIG_DIR)/templates/proj-gen-task-prompts
+	@cp proj-gen-task-prompts-workflow/commands/*.md $(CLAUDE_CONFIG_DIR)/commands/
+	@cp proj-gen-task-prompts-workflow/agents/*.md $(CLAUDE_CONFIG_DIR)/agents/
+	@cp -r proj-gen-task-prompts-workflow/templates/* $(CLAUDE_CONFIG_DIR)/templates/proj-gen-task-prompts/
+	@echo "✅ Project Task Prompts Generator workflow deployed successfully!"
+	@echo "   Usage: /proj-gen-task-prompts"
+
+# Deploy all project workflows
+deploy-project-workflows: deploy-proj-check-standards deploy-proj-gen-standards deploy-proj-gen-task-prompts
+	@echo "✨ All project workflows deployed!"
+
+
 # Deploy everything
-deploy-all: deploy-commands deploy-agents
+deploy-all: deploy-commands deploy-agents deploy-project-workflows
 	@mkdir -p $(CLAUDE_CONFIG_DIR)/output-styles
 	@cp $(OUTPUT_STYLES_DIR)/*.md $(CLAUDE_CONFIG_DIR)/output-styles/ 2>/dev/null || true
 	@echo "✨ Full deployment complete!"
@@ -115,6 +154,9 @@ deploy-all: deploy-commands deploy-agents
 	@echo "Quick Start:"
 	@echo "  BMAD:         /bmad-pilot \"build user authentication\""
 	@echo "  Requirements: /requirements-pilot \"implement JWT auth\""
+	@echo "  Standards:    /proj-gen-standards"
+	@echo "  Check:        /proj-check-standards"
+	@echo "  Tasks:        /proj-gen-task-prompts \"build payment system\""
 	@echo "  Manual:       /ask → /code → /test → /review"
 
 # Test BMAD workflow

@@ -119,6 +119,12 @@
           "description": "Merge proj-gen-task-prompts commands and agents"
         },
         {
+          "type": "copy_dir",
+          "source": "proj-gen-task-prompts-workflow/templates",
+          "target": "templates/proj-gen-task-prompts",
+          "description": "Copy proj-gen-task-prompts templates"
+        },
+        {
           "type": "copy_file",
           "source": "docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md",
           "target": "docs/PROJ-GEN-TASK-PROMPTS-WORKFLOW.md",
@@ -134,6 +140,12 @@
           "type": "merge_dir",
           "source": "proj-gen-standards-workflow",
           "description": "Merge proj-gen-standards commands and agents"
+        },
+        {
+          "type": "copy_dir",
+          "source": "proj-gen-standards-workflow/templates",
+          "target": "templates/proj-gen-standards",
+          "description": "Copy proj-gen-standards templates"
         },
         {
           "type": "copy_file",
